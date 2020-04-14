@@ -35,13 +35,15 @@ namespace HelloWeb
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseHttpsRedirection(); // If get http request, ask for https instead, encrypts information between web and server
 
-            app.UseRouting();
+            app.UseStaticFiles(); // Any files will be used as is
 
-            app.UseAuthorization();
+            app.UseRouting(); // How ASP.net responds to incoming requests
 
+            app.UseAuthorization(); // Protects parts of the website
+
+            // Sets up connections for requests
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
