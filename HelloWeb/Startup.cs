@@ -24,7 +24,7 @@ namespace HelloWeb
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsDevelopment()) // can replace with FALSE to test error page
             {
                 app.UseDeveloperExceptionPage();
             }
